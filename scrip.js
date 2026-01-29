@@ -1,5 +1,3 @@
-// Make sure this file name is EXACTLY: script.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const photoElement = document.getElementById("photo");
   const yesBtn = document.getElementById("yes-btn");
@@ -9,13 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const subText = document.getElementById("sub-text");
   const questionText = document.getElementById("question-text");
 
-  // Check that elements exist (debug safety)
   if (!photoElement || !yesBtn || !noBtn) {
     console.error("One or more elements not found. Check your HTML IDs.");
     return;
   }
 
-  // YES button
+  // YES button click
   yesBtn.addEventListener("click", function () {
     mainText.textContent = "You said yes, Alondra!!! 🌸💖";
     subText.textContent = "My love for you blooms stronger every day — just like lilies.";
@@ -26,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     noBtn.style.display = "none";
   });
 
-  // NO button runs away 😏
+  // NO button hover (runs away)
   noBtn.addEventListener("mouseover", function () {
-    const x = Math.random() * 200 - 100;
-    const y = Math.random() * 200 - 100;
+    const x = Math.random() * 300 - 150;
+    const y = Math.random() * 300 - 150;
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
   });
 
